@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Wheel Animation</string>
+    <string name="animate_btn_txt">Animate</string>
+
+</resources>

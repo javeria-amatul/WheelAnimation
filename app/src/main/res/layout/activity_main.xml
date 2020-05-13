@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/percent_of_progress_et"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/animate_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_marginLeft="12dp"
+        app:layout_constraintStart_toEndOf="@+id/percent_of_progress_et"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/animate_btn_txt"/>
+
+    <com.javeria.wheelanimation.CircleSeekBar
+        android:id="@+id/picker"
+        android:layout_width="280dp"
+        android:layout_height="290dp"
+        app:max="100"
+        android:layout_marginTop="25dp"
+        app:blob_fill_color="@color/blob_fill_color"
+        app:blob_size="15dp"
+        app:init_position="0"
+        app:wheel_active_color="@color/wheel_active_color"
+        app:wheel_unactive_color="@color/wheel_unactive_color"
+        app:layout_constraintTop_toBottomOf="@+id/percent_of_progress_et"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
